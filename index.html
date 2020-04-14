@@ -10,14 +10,38 @@
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 </head>
 <body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store.
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-
+  <header class="header">
+    <img class="header__logo" src="./assets/images/logo.svg" alt="Base Apparel Logo">
+  </header>
+  <main>
+    <section class="hero">
+      <img class="hero__image" src="./assets/images/hero-mobile.jpg" alt="">
+      <h1 class="hero__title">
+        <span class="light-font">
+          We're<br>
+        </span>
+        coming<br>
+        soon
+      </h1>
+      <p class="hero__description">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form class="hero__form form">
+        <input
+          type="text"
+          class="form__input"
+          placeholder="Email Address"
+          pattern="^([A-Za-z\d.-]+)@([a-z\d]+)(\.[a-z]{2,24}){1,8}$"
+          required
+        >
+        <img class="form__error-icon" src="./assets/images/" alt="">
+        <button class="form__button" type="submit">
+          <img src="./assets/images/icon-arrow.svg" alt="Arrow Icon">
+        </button>
+      </form>
+    </section>
+  </main>
   <footer class="footer">
     <p class="attribution">
       Challenge by <a	class="attribution__anchor"	href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="attribution__anchor" href="https://github.com/Samolote" target="_blank">Samolote</a>.
