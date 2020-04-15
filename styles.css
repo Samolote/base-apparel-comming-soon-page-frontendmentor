@@ -4,8 +4,10 @@
 
 	--dark-grayish-red: hsl(0, 6%, 24%);
 
-	--primary-gradient: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-	--secondary-gradient: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+	--primary-gradient: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+	--secondary-gradient: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+
+	--default-transition: 0.3s ease-in-out;
 }
 
 *,
@@ -15,8 +17,100 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Josefin Sans', sans-serif;
+	color: var(--desaturated-red);
+}
+
+.hero {
+	background-image: linear-gradient(var(--primary-gradient));
+}
+
+.hero__logo {
+	display: block;
+	width: 8rem;
+	margin: 2rem;
+}
+
+.hero__image {
+	display: block;
+	margin: 0 auto 5rem;
+	width: 100%;
+}
+
+.hero__text-content {
+	margin: 0 2rem;
+	padding-bottom: 6rem;
+}
+
+.hero__title {
+	margin: 0 0 1.5rem;
+	font-size: 3em;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	line-height: 1.075;
+	color: var(--dark-grayish-red);
+}
+
+.hero__description {
+	margin: 0 0 2.5rem;
+	text-align: center;
+	line-height: 1.6;
+}
+
+.form {
+	position: relative;
+	height: 3.5rem;
+}
+
+.form__input {
+	padding: 0 5.5rem 0 1.5rem;
+	border: var(--desaturated-red) 1px solid;
+	border-radius: 1.75rem;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	font-size: 1em;
+	transition: border-color var(--default-transition);
+}
+
+.form__input::placeholder {
+	color: var(--desaturated-red);
+}
+
+.form__error-icon {
+	position: absolute;
+	right: 5.25rem;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-block;
+}
+
+.form__button {
+	right: 0;
+	top: 0;
+}
+
+.button {
+	position: absolute;
+	display: inline-block;
+	border: none;
+	border-radius: 2rem;
+	width: 4.5rem;
+	height: 100%;
+	background-image: linear-gradient(var(--secondary-gradient));
+	box-shadow: 0 1rem 2rem -0.5rem var(--desaturated-red);
+	cursor: pointer;
+}
+
+.button__icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
 }
 
 .footer {
@@ -30,4 +124,9 @@ html {
 
 .attribution__anchor {
 	color: hsl(228, 45%, 44%);
+}
+
+.light-font {
+	color: var(--desaturated-red);
+	font-weight: 300;
 }
