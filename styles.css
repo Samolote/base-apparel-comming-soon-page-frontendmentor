@@ -116,6 +116,13 @@ html {
 	opacity: 1;
 }
 
+.form__error {
+	display: block;
+	padding: 0.75rem 0 0 1.5rem;
+	text-align: left;
+	color: var(--soft-red);
+}
+
 .form__button {
 	right: 0;
 	top: 0;
