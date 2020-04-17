@@ -214,7 +214,7 @@ html {
 
 	.hero__logo-container {
 		max-width: 100%;
-		margin-bottom: 25%;
+		margin-bottom: 7vw;
 	}
 
 	.hero__logo {
@@ -228,5 +228,27 @@ html {
 
 	.image--desktop {
 		display: block;
+	}
+}
+
+@media (min-width: 1170px) {
+	.hero__logo-container {
+		margin-bottom: 9vw;
+	}
+}
+
+@media (min-width: 1360px) {
+	.hero__logo-container {
+		margin-bottom: 12vw;
+	}
+
+	.hero__logo {
+		margin: 2rem 0 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.hero__logo-container {
+		margin-bottom: 30%;
 	}
 }
