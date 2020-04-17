@@ -104,7 +104,16 @@ html {
 	right: 5.25rem;
 	top: 50%;
 	transform: translateY(-50%);
-	display: inline-block;
+	opacity: 0;
+	transition: opacity var(--default-transition);
+}
+
+.invalid-input {
+	border-color: var(--soft-red);
+}
+
+.invalid-input ~ .form__error-icon {
+	opacity: 1;
 }
 
 .form__button {
